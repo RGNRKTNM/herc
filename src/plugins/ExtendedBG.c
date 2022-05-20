@@ -3281,8 +3281,8 @@ int bg_e_team_join(int bg_id, struct map_session_data *sd, int guild_id)
 		clif->guild_memberlist(pl_sd);
 		clif->guild_positioninfolist(pl_sd);
 		if (pl_sd != sd)
-			clif->hpmeter_single(sd->fd, pl_sd->bl.id, pl_sd->battle_status.hp, pl_sd->battle_status.max_hp);
-	}
+		clif->hpmeter_single(sd->fd, pl_sd->bl.id, pl_sd->battle_status.hp, pl_sd->battle_status.max_hp, pl_sd->battle_status.sp, pl_sd->battle_status.max_sp);
+}
 
 	clif->bg_hp(sd);
 	clif->bg_xy(sd);
